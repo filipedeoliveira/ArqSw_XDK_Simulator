@@ -11,4 +11,28 @@ package xdk_simulator;
  */
 public class Cliente {
     
+    private String nome;
+    
+
+    public Cliente() {
+        this.nome = "";
+    }
+
+    public Cliente(String no) {
+        this.nome = no;    
+    }
+
+    public Cliente(Cliente cl) {
+        this.nome = cl.getNome();
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+  
 }

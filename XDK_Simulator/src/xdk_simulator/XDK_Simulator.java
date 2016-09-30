@@ -20,7 +20,7 @@ public class XDK_Simulator {
         Random randT = new Random();
 
         temperatura = randT.nextFloat() * (maxT - minT) + minT;
-        System.out.println("A temperatura é: %.2f " + temperatura);
+        //System.out.println("A temperatura é: %.2f " + temperatura);
         return temperatura;
 
     }
@@ -32,7 +32,7 @@ public class XDK_Simulator {
         Random randP = new Random();
 
         pressao = randP.nextFloat() * (maxP - minP) + minP;
-        System.out.println("A pressão é: %.2f  " + pressao);
+        //System.out.println("A pressão é: %.2f  " + pressao);
         return pressao;
     }
 
@@ -43,7 +43,7 @@ public class XDK_Simulator {
         Random randH = new Random();
 
         humidade = randH.nextFloat() * (maxH - minH) + minH;
-        System.out.println("A humidade é: %.2f " + humidade);
+        //System.out.println("A humidade é: %.2f " + humidade);
         return humidade;
     }
 
@@ -54,7 +54,7 @@ public class XDK_Simulator {
         Random randL = new Random();
 
         luz = randL.nextFloat() * (maxL - minL) + minL;
-        System.out.println("A intensidade de Luz é: %.2f " + luz);
+        //System.out.println("A intensidade de Luz é: %.2f " + luz);
         return luz;
     }
 
@@ -65,7 +65,7 @@ public class XDK_Simulator {
         Random randA = new Random();
 
         acustica = randA.nextFloat() * (maxA - minA) + minA;
-        System.out.println("A acústica é: %.2f " + acustica);
+        //System.out.println("A acústica é: %.2f " + acustica);
         return acustica;
     }
 
@@ -76,7 +76,7 @@ public class XDK_Simulator {
         Random randAc = new Random();
 
         acelerometro = randAc.nextFloat() * (maxAc - minAc) + minAc;
-        System.out.println("A aceleraçãp é: %.2f " + acelerometro);
+        //System.out.println("A aceleraçãp é: %.2f " + acelerometro);
         return acelerometro;
     }
 
@@ -87,7 +87,7 @@ public class XDK_Simulator {
         Random randG = new Random();
 
         giroscopio = randG.nextFloat() * (maxG - minG) + minG;
-        System.out.println("A horientaçã é: %.2f " + giroscopio);
+        //System.out.println("A horientaçã é: %.2f " + giroscopio);
         return giroscopio;
     }
 
@@ -98,7 +98,7 @@ public class XDK_Simulator {
         Random randMg = new Random();
 
         magnetometro = randMg.nextFloat() * (maxMg - minMg) + minMg;
-        System.out.println("A magneterização é: %.2f " + magnetometro);
+        //System.out.println("A magneterização é: %.2f " + magnetometro);
         return magnetometro;
     }
 
