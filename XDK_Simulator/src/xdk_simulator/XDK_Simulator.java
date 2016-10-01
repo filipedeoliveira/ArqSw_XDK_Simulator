@@ -9,7 +9,7 @@ import java.util.Random;
 
 /**
  *
- * @author Filipe Oliveira
+ *
  */
 public class XDK_Simulator {
 

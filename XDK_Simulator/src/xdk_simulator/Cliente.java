@@ -7,7 +7,7 @@ package xdk_simulator;
 
 /**
  *
- * @author Filipe Oliveira
+ * 
  */
 public class Cliente {
     
