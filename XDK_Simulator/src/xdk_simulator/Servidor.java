@@ -15,20 +15,22 @@ public class Servidor {
     
     
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         
     int min= 1;
     int max=8;
     float result;
     Random rand = new Random();
+    
+     while(true) {
     int randomNum = rand.nextInt((max - min) + 1) + min;
-
+    
 	switch (randomNum) {
             case 1:  result = XDK_Simulator.getAcelerometro();
-                    System.out.println("A aceleraçãp é: %.2f " + result);
+                    System.out.println("A aceleração é: %.2f " + result);
                      break;
             case 2:  result = XDK_Simulator.getGiroscopio();
-                    System.out.println("A horientaçã é: %.2f " + result);
+                    System.out.println("A horientação é: %.2f " + result);
                      break;
             case 3:  result = XDK_Simulator.getMagnetometro();
                     System.out.println("A magneterização é: %.2f " + result);
@@ -48,8 +50,11 @@ public class Servidor {
             case 8:  result = XDK_Simulator.getLuz();
                     System.out.println("A intensidade de Luz é: %.2f " + result);
                      break;
-
         }
+        Thread.sleep(5000);
+    }
+     
+
         
 
     }
