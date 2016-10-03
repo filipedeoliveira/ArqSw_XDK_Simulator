@@ -14,46 +14,42 @@ import java.util.Scanner;
 
 /**
  *
- * 
+ *
  */
 public class Cliente {
-    
-   public static void main(String[] args) throws UnknownHostException, IOException {
-     // dispara cliente
-     new Cliente("127.0.0.1", 12345).executa();
-   }
-   
-   private String host;
-   private int porta;
-   
-   public Cliente (String host, int porta) {
-     this.host = host;
-     this.porta = porta;
-   }
-   
-   public String getHost(){
-       return this.host;
-   }
-   
-   public int getPorta(){
-   return this.porta; 
-   }
-   
-   public void executa() throws UnknownHostException, IOException {
-     Socket cliente = new Socket(this.host, this.porta);
-     System.out.println("O cliente conectou se ao servidor!");
- 
-     // thread para receber mensagens do servidor
-     
-     Scanner scanner = new Scanner(cliente.getInputStream());
-    while (!scanner.hasNextLine());
-    while (scanner.hasNextLine()) {
-        System.out.println(scanner.nextLine());
+
+    public static void main(String[] args) throws UnknownHostException, IOException {
+        // dispara cliente
+        new Cliente("127.0.0.1", 12345).executa();
     }
-     
-     
-     cliente.close();    
-   }
- }
- 
- 
+
+    private String host;
+    private int porta;
+
+    public Cliente(String host, int porta) {
+        this.host = host;
+        this.porta = porta;
+    }
+
+    public String getHost() {
+        return this.host;
+    }
+
+    public int getPorta() {
+        return this.porta;
+    }
+
+    public void executa() throws UnknownHostException, IOException {
+        Socket cliente = new Socket(this.host, this.porta);
+        System.out.println("O cliente conectou se ao servidor!");
+
+        // thread para receber mensagens do servidor
+        Scanner scanner = new Scanner(cliente.getInputStream());
+        while (!scanner.hasNextLine());
+        while (scanner.hasNextLine()) {
+            System.out.println(scanner.nextLine());
+        }
+
+        cliente.close();
+    }
+}
