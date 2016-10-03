@@ -31,24 +31,27 @@ public class Cliente {
      this.porta = porta;
    }
    
+   public String getHost(){
+       return this.host;
+   }
+   
+   public int getPorta(){
+   return this.porta; 
+   }
+   
    public void executa() throws UnknownHostException, IOException {
      Socket cliente = new Socket(this.host, this.porta);
      System.out.println("O cliente conectou se ao servidor!");
  
      // thread para receber mensagens do servidor
-     Recebedor r = new Recebedor(cliente.getInputStream());
-     new Thread(r).start();
-     Servidor.FuncAux();
      
-     // lê msgs do teclado e manda pro servidor
-     Scanner teclado = new Scanner(System.in);
-     PrintStream saida = new PrintStream(cliente.getOutputStream());
-     while (teclado.hasNextLine()) {
-       saida.println(teclado.nextLine());
-     }
+     Scanner scanner = new Scanner(cliente.getInputStream());
+    while (!scanner.hasNextLine());
+    while (scanner.hasNextLine()) {
+        System.out.println(scanner.nextLine());
+    }
      
-     saida.close();
-     teclado.close();
+     
      cliente.close();    
    }
  }
