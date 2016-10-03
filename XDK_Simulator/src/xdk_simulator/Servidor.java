@@ -10,7 +10,8 @@ import java.util.Random;
 
 public class Servidor {
 
-    static volatile float MYVALUE;
+    //static volatile float MYVALUE;
+    static volatile String MYVALUE;
 
     public static void main(String[] args) throws IOException {
         // inicia o servidor
@@ -28,7 +29,7 @@ public class Servidor {
     public void executa() throws IOException {
         ServerSocket servidor = new ServerSocket(this.porta);
         System.out.println("Porta 12345 aberta!");
-        int porta = 0;
+        int porta = 1;
 
         ServidorThread mensageiro = new ServidorThread();
         mensageiro.start();
