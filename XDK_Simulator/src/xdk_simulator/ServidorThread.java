@@ -26,7 +26,7 @@ public class ServidorThread extends Thread {
                         System.out.println("ERRO");
                     }
                 }
-                sleep(5000);
+                sleep(3000);
 
             } catch (InterruptedException ex) {
                 Logger.getLogger(ServidorThread.class.getName()).log(Level.SEVERE, null, ex);
