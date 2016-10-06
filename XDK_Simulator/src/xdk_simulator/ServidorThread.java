@@ -20,7 +20,6 @@ public class ServidorThread extends Thread {
                 for (Socket s : Servidor.clientes) {
                     try {
                         saida = new PrintStream(s.getOutputStream());
-                        //saida.println(Float.toString(Servidor.MYVALUE));
                         saida.println((Servidor.MYVALUE));
                     } catch (IOException ex) {
                         System.out.println("ERRO");
