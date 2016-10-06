@@ -131,7 +131,7 @@ public class Simulador {
                 //System.out.println("A magneterização é: %.2f " + result);
                 break;
             case 4:
-                result =  .getHumidade();
+                result =  getHumidade();
                 //System.out.println("A humidade é: %.2f " + result);
                 break;
             case 5:
